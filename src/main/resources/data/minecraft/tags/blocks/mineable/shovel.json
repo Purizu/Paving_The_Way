@@ -1,0 +1,13 @@
+{
+  "values": [
+    "grounded:shaved_dirt_path",
+    "grounded:coarse_dirt_path",
+    "grounded:mycelium_path",
+    "grounded:podzol_path",
+    "grounded:mud_path",
+    "grounded:sand_path",
+    "grounded:red_sand_path",
+    "grounded:soul_sand_path",
+    "grounded:soul_soil_path"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "grounded:block/gravel_path"
+      },
+      {
+        "model": "grounded:block/gravel_path",
+        "y": 90
+      },
+      {
+        "model": "grounded:block/gravel_path",
+        "y": 180
+      },
+      {
+        "model": "grounded:block/gravel_path",
+        "y": 270
+      }
+    ]
+  }
+}
