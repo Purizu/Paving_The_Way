@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "minecraft:warped_nylium"
+          "name": "minecraft:netherrack"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "grounded:blocks/warped_nylium_path"
+  "random_sequence": "minecraft:blocks/netherrack"
 }
