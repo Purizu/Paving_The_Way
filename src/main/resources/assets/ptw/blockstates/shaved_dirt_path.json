@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "ptw:block/shaved_dirt_path"
+      },
+      {
+        "model": "ptw:block/shaved_dirt_path",
+        "y": 90
+      },
+      {
+        "model": "ptw:block/shaved_dirt_path",
+        "y": 180
+      },
+      {
+        "model": "ptw:block/shaved_dirt_path",
+        "y": 270
+      }
+    ]
+  }
+}
