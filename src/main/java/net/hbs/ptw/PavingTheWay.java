@@ -1,6 +1,6 @@
-package net.iso.ptw;
+package net.hbs.ptw;
 
-import net.iso.ptw.contents.blocks.PtwBlocks;
+import net.hbs.ptw.contents.blocks.PtwBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
@@ -45,6 +45,7 @@ public class PavingTheWay
             entries.putAfter(new ItemStack(Blocks.WARPED_NYLIUM), new ItemStack(PtwBlocks.WARPED_NYLIUM_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             entries.putAfter(new ItemStack(Blocks.SOUL_SAND), new ItemStack(PtwBlocks.SOUL_SAND_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             entries.putAfter(new ItemStack(Blocks.SOUL_SOIL), new ItemStack(PtwBlocks.SOUL_SOIL_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            entries.putAfter(new ItemStack(Blocks.NETHERRACK), new ItemStack(PtwBlocks.NETHERRACK_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 

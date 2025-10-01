@@ -1,4 +1,4 @@
-package net.iso.ptw.contents.blocks;
+package net.hbs.ptw.contents.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

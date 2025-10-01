@@ -1,6 +1,6 @@
-package net.iso.ptw.contents.blocks;
+package net.hbs.ptw.contents.blocks;
 
-import net.iso.ptw.PavingTheWay;
+import net.hbs.ptw.PavingTheWay;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -30,8 +30,9 @@ public class PtwBlocks {
     public static final RegistryObject<Block> GRAVEL_PATH = registerBlock("gravel_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.GRAVEL), Blocks.GRAVEL, true));
     public static final RegistryObject<Block> CRIMSON_NYLIUM_PATH = registerBlock("crimson_nylium_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).mapColor(MapColor.CRIMSON_NYLIUM), Blocks.NETHERRACK, false));
     public static final RegistryObject<Block> WARPED_NYLIUM_PATH = registerBlock("warped_nylium_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK).mapColor(MapColor.WARPED_NYLIUM), Blocks.NETHERRACK, false));
-    public static final RegistryObject<Block> SOUL_SAND_PATH = registerBlock("soul_sand_path", ()-> new DirtPathBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_SAND)));
-    public static final RegistryObject<Block> SOUL_SOIL_PATH = registerBlock("soul_soil_path", ()-> new DirtPathBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL)));
+    public static final RegistryObject<Block> SOUL_SAND_PATH = registerBlock("soul_sand_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_SAND), Blocks.SOUL_SAND, false));
+    public static final RegistryObject<Block> SOUL_SOIL_PATH = registerBlock("soul_soil_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL), Blocks.SOUL_SOIL, false));
+    public static final RegistryObject<Block> NETHERRACK_PATH = registerBlock("netherrack_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK), Blocks.NETHERRACK, false));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

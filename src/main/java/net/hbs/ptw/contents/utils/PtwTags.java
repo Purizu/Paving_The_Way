@@ -1,6 +1,6 @@
-package net.iso.ptw.contents.utils;
+package net.hbs.ptw.contents.utils;
 
-import net.iso.ptw.PavingTheWay;
+import net.hbs.ptw.PavingTheWay;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;

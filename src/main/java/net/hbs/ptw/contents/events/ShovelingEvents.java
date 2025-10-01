@@ -1,9 +1,9 @@
-package net.iso.ptw.contents.events;
+package net.hbs.ptw.contents.events;
 
 import com.google.common.collect.ImmutableMap;
-import net.iso.ptw.PavingTheWay;
-import net.iso.ptw.contents.blocks.PtwBlocks;
-import net.iso.ptw.contents.utils.PtwTags;
+import net.hbs.ptw.PavingTheWay;
+import net.hbs.ptw.contents.blocks.PtwBlocks;
+import net.hbs.ptw.contents.utils.PtwTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
@@ -38,6 +38,7 @@ public class ShovelingEvents {
         FLATTENING_SOUNDS.put(Blocks.WARPED_NYLIUM, SoundEvents.NYLIUM_FALL);
         FLATTENING_SOUNDS.put(Blocks.SOUL_SAND, SoundEvents.SOUL_SAND_FALL);
         FLATTENING_SOUNDS.put(Blocks.SOUL_SOIL, SoundEvents.SOUL_SOIL_FALL);
+        FLATTENING_SOUNDS.put(Blocks.NETHERRACK, SoundEvents.NETHERRACK_FALL);
     }
 
     @SubscribeEvent
@@ -51,7 +52,6 @@ public class ShovelingEvents {
         if (stack.is(ItemTags.SHOVELS) && !player.isSpectator() && event.getFace() != Direction.DOWN && (level.isEmptyBlock(pos.above()) || level.getBlockState(pos.above()).canBeReplaced()) && state.is(PtwTags.Blocks.PATHABLE_BLOCKS)) {
             SoundEvent sound = FLATTENING_SOUNDS.getOrDefault(state.getBlock(), SoundEvents.SHOVEL_FLATTEN);
             level.playSound(player, pos, sound, SoundSource.BLOCKS, 1, 1);
-
             if (!level.isClientSide) {
                 stack.hurtAndBreak(1, player, player1 -> player1.broadcastBreakEvent(event.getHand()));
                 BlockState pathState = ImmutableMap.ofEntries(Map.entry(
@@ -69,6 +69,16 @@ public class ShovelingEvents {
                         Map.entry(Blocks.SOUL_SAND, PtwBlocks.SOUL_SAND_PATH),
                         Map.entry(Blocks.SOUL_SOIL, PtwBlocks.SOUL_SOIL_PATH))
                         .get(state.getBlock()).get().defaultBlockState(); level.setBlockAndUpdate(pos, pathState);
+            }
+            event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
+            event.setCanceled(true);
+        }
+        if (stack.is(ItemTags.PICKAXES) && !player.isSpectator() && event.getFace() != Direction.DOWN && (level.isEmptyBlock(pos.above()) || level.getBlockState(pos.above()).canBeReplaced()) && state.is(PtwTags.Blocks.PATHABLE_BLOCKS)) {
+            SoundEvent sound = FLATTENING_SOUNDS.getOrDefault(state.getBlock(), SoundEvents.SHOVEL_FLATTEN);
+            level.playSound(player, pos, sound, SoundSource.BLOCKS, 1, 1);
+            if (!level.isClientSide) {
+                stack.hurtAndBreak(1, player, player1 -> player1.broadcastBreakEvent(event.getHand()));
+                BlockState pathState = ImmutableMap.ofEntries(Map.entry(Blocks.NETHERRACK, PtwBlocks.NETHERRACK_PATH)).get(state.getBlock()).get().defaultBlockState(); level.setBlockAndUpdate(pos, pathState);
             }
             event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
             event.setCanceled(true);
