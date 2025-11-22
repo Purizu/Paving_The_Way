@@ -1,6 +1,6 @@
-package net.hbs.ptw;
+package net.purizu.ptw;
 
-import net.hbs.ptw.contents.blocks.PtwBlocks;
+import net.purizu.ptw.contents.blocks.PtwBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;

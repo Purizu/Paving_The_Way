@@ -1,6 +1,6 @@
-package net.hbs.ptw.contents.blocks;
+package net.purizu.ptw.contents.blocks;
 
-import net.hbs.ptw.PavingTheWay;
+import net.purizu.ptw.PavingTheWay;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
