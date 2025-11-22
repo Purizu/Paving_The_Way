@@ -1,9 +1,9 @@
-package net.hbs.ptw.contents.events;
+package net.purizu.ptw.contents.events;
 
 import com.google.common.collect.ImmutableMap;
-import net.hbs.ptw.PavingTheWay;
-import net.hbs.ptw.contents.blocks.PtwBlocks;
-import net.hbs.ptw.contents.utils.PtwTags;
+import net.purizu.ptw.PavingTheWay;
+import net.purizu.ptw.contents.blocks.PtwBlocks;
+import net.purizu.ptw.contents.utils.PtwTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
@@ -73,7 +73,7 @@ public class ShovelingEvents {
             event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
             event.setCanceled(true);
         }
-        if (stack.is(ItemTags.PICKAXES) && !player.isSpectator() && event.getFace() != Direction.DOWN && (level.isEmptyBlock(pos.above()) || level.getBlockState(pos.above()).canBeReplaced()) && state.is(PtwTags.Blocks.PATHABLE_BLOCKS)) {
+        if (stack.is(ItemTags.PICKAXES) && !player.isSpectator() && event.getFace() != Direction.DOWN && (level.isEmptyBlock(pos.above()) || level.getBlockState(pos.above()).canBeReplaced()) && state.is(PtwTags.Blocks.PATHABLE_BLOCKS_PICKAXE)) {
             SoundEvent sound = FLATTENING_SOUNDS.getOrDefault(state.getBlock(), SoundEvents.SHOVEL_FLATTEN);
             level.playSound(player, pos, sound, SoundSource.BLOCKS, 1, 1);
             if (!level.isClientSide) {
