@@ -1,0 +1,16 @@
+{
+  "block.minecraft.dirt_path": "Grass Path",
+  "block.ptw.coarse_dirt_path": "Coarse Dirt Path",
+  "block.ptw.crimson_nylium_path": "Crimson Nylium Path",
+  "block.ptw.gravel_path": "Gravel Path",
+  "block.ptw.mud_path": "Mud Path",
+  "block.ptw.mycelium_path": "Mycelium Path",
+  "block.ptw.netherrack_path": "Netherrack Path",
+  "block.ptw.podzol_path": "Podzol Path",
+  "block.ptw.red_sand_path": "Red Sand Path",
+  "block.ptw.sand_path": "Sand Path",
+  "block.ptw.shaved_dirt_path": "Dirt Path",
+  "block.ptw.soul_sand_path": "Soul Sand Path",
+  "block.ptw.soul_soil_path": "Soul Soil Path",
+  "block.ptw.warped_nylium_path": "Warped Nylium Path"
+}

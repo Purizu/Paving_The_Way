@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "ptw:netherrack_path",
+    "ptw:crimson_nylium_path",
+    "ptw:warped_nylium_path"
+  ]
+}
