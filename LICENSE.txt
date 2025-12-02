@@ -1,4 +1,4 @@
-Copyright © 2025 Isoceleses
+Copyright © 2025 Purizu
 
 All rights reserved.
 
@@ -20,4 +20,4 @@ You may:
 
 - Any unauthorized use of the Software is strictly prohibited and may result in legal action.
 
-For permissions beyond this license, please contact: `isoceleses` on discord
+For permissions beyond this license, please contact: `splattered_butter` on discord
