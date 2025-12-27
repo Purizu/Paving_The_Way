@@ -26,5 +26,6 @@ public class LootTableDatagen extends FabricBlockLootTableProvider {
         addDrop(PtwBlocks.SOUL_SAND_PATH, Blocks.SOUL_SAND);
         addDrop(PtwBlocks.SOUL_SOIL_PATH, Blocks.SOUL_SOIL);
         addDrop(PtwBlocks.NETHERRACK_PATH, Blocks.NETHERRACK);
+        addDrop(PtwBlocks.ROOTED_DIRT_PATH, Blocks.ROOTED_DIRT);
     }
 }

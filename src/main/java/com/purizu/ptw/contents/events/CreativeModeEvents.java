@@ -23,6 +23,7 @@ public class CreativeModeEvents {
                     c.addAfter(new ItemStack(Items.SOUL_SAND), new ItemStack(PtwBlocks.SOUL_SAND_PATH));
                     c.addAfter(new ItemStack(Items.SOUL_SOIL), new ItemStack(PtwBlocks.SOUL_SOIL_PATH));
                     c.addAfter(new ItemStack(Items.NETHERRACK), new ItemStack(PtwBlocks.NETHERRACK_PATH));
+                    c.addAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(PtwBlocks.ROOTED_DIRT_PATH));
         });
     }
 }

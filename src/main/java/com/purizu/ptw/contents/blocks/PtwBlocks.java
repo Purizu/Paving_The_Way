@@ -28,6 +28,7 @@ public class PtwBlocks {
     public static final Block SOUL_SAND_PATH = registerBlock("soul_sand_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.SOUL_SAND), Blocks.SOUL_SAND, false));
     public static final Block SOUL_SOIL_PATH = registerBlock("soul_soil_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.SOUL_SOIL), Blocks.SOUL_SOIL, false));
     public static final Block NETHERRACK_PATH = registerBlock("netherrack_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.NETHERRACK), Blocks.NETHERRACK, false));
+    public static final Block ROOTED_DIRT_PATH = registerBlock("rooteed_dirt_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.ROOTED_DIRT), Blocks.ROOTED_DIRT, false));
 
 
     private static Block registerBlock(String name, Block block) {

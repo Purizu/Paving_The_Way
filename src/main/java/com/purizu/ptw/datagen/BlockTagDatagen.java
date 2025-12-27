@@ -1,6 +1,5 @@
 package com.purizu.ptw.datagen;
 
-import com.purizu.ptw.contents.blocks.PtwBlocks;
 import com.purizu.ptw.contents.utils.PtwTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
@@ -34,7 +33,8 @@ public class BlockTagDatagen extends FabricTagProvider.BlockTagProvider{
                 .add(RED_SAND_PATH)
                 .add(GRAVEL_PATH)
                 .add(SOUL_SAND_PATH)
-                .add(SOUL_SOIL_PATH);
+                .add(SOUL_SOIL_PATH)
+                .add(ROOTED_DIRT_PATH);
 
         getOrCreateTagBuilder(BlockTags.SOUL_SPEED_BLOCKS)
                 .add(SOUL_SAND_PATH)
@@ -54,6 +54,7 @@ public class BlockTagDatagen extends FabricTagProvider.BlockTagProvider{
                 .add(Blocks.CRIMSON_NYLIUM)
                 .add(Blocks.WARPED_NYLIUM)
                 .add(Blocks.SOUL_SAND)
-                .add(Blocks.SOUL_SOIL);
+                .add(Blocks.SOUL_SOIL)
+                .add(Blocks.ROOTED_DIRT);
     }
 }

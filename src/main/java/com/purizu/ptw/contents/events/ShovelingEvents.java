@@ -1,11 +1,9 @@
 package com.purizu.ptw.contents.events;
 
-import com.purizu.ptw.contents.blocks.PtwBlocks;
 import com.purizu.ptw.contents.utils.PtwTags;
 import net.fabricmc.fabric.api.event.player.UseBlockCallback;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
@@ -39,6 +37,7 @@ public class ShovelingEvents {
         FLATTENING_SOUNDS.put(SOUL_SAND, SoundEvents.BLOCK_SOUL_SAND_FALL);
         FLATTENING_SOUNDS.put(SOUL_SOIL, SoundEvents.BLOCK_SOUL_SOIL_FALL);
         FLATTENING_SOUNDS.put(NETHERRACK, SoundEvents.BLOCK_NETHERRACK_FALL);
+        FLATTENING_SOUNDS.put(ROOTED_DIRT, SoundEvents.BLOCK_ROOTED_DIRT_FALL);
 
         EXTRA_SHOVELING.put(DIRT, SHAVED_DIRT_PATH);
         EXTRA_SHOVELING.put(COARSE_DIRT, COARSE_DIRT_PATH);
@@ -52,6 +51,7 @@ public class ShovelingEvents {
         EXTRA_SHOVELING.put(WARPED_NYLIUM, WARPED_NYLIUM_PATH);
         EXTRA_SHOVELING.put(SOUL_SAND, SOUL_SAND_PATH);
         EXTRA_SHOVELING.put(SOUL_SOIL, SOUL_SOIL_PATH);
+        EXTRA_SHOVELING.put(ROOTED_DIRT, ROOTED_DIRT_PATH);
 
         EXTRA_SHOVELING_PICKAXE.put(NETHERRACK, NETHERRACK_PATH);
     }

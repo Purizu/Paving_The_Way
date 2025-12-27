@@ -26,5 +26,6 @@ public class NameDatagen_EN_US extends FabricLanguageProvider {
         translationBuilder.add(PtwBlocks.SOUL_SAND_PATH, "Soul Sand Path");
         translationBuilder.add(PtwBlocks.SOUL_SOIL_PATH, "Soul Soil Path");
         translationBuilder.add(PtwBlocks.NETHERRACK_PATH, "Netherrack Path");
+        translationBuilder.add(PtwBlocks.ROOTED_DIRT_PATH, "Rooted Dirt Path");
     }
 }
