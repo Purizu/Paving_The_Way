@@ -12,6 +12,8 @@
     "minecraft:crimson_nylium",
     "minecraft:warped_nylium",
     "minecraft:soul_sand",
-    "minecraft:soul_soil"
+    "minecraft:soul_soil",
+    "minecraft:rooted_dirt",
+    "minecraft:snow_block"
   ]
 }

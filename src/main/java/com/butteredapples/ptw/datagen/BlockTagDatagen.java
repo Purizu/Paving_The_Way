@@ -1,6 +1,6 @@
-package com.purizu.ptw.datagen;
+package com.butteredapples.ptw.datagen;
 
-import com.purizu.ptw.contents.utils.PtwTags;
+import com.butteredapples.ptw.contents.utils.PtwTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Blocks;
@@ -9,7 +9,7 @@ import net.minecraft.registry.tag.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
-import static com.purizu.ptw.contents.blocks.PtwBlocks.*;
+import static com.butteredapples.ptw.contents.blocks.PtwBlocks.*;
 
 public class BlockTagDatagen extends FabricTagProvider.BlockTagProvider{
     public BlockTagDatagen(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -34,7 +34,9 @@ public class BlockTagDatagen extends FabricTagProvider.BlockTagProvider{
                 .add(GRAVEL_PATH)
                 .add(SOUL_SAND_PATH)
                 .add(SOUL_SOIL_PATH)
-                .add(ROOTED_DIRT_PATH);
+                .add(ROOTED_DIRT_PATH)
+                .add(SNOW_PATH)
+                .add(SNOWY_DIRT_PATH);
 
         getOrCreateTagBuilder(BlockTags.SOUL_SPEED_BLOCKS)
                 .add(SOUL_SAND_PATH)
@@ -55,6 +57,12 @@ public class BlockTagDatagen extends FabricTagProvider.BlockTagProvider{
                 .add(Blocks.WARPED_NYLIUM)
                 .add(Blocks.SOUL_SAND)
                 .add(Blocks.SOUL_SOIL)
-                .add(Blocks.ROOTED_DIRT);
+                .add(Blocks.ROOTED_DIRT)
+                .add(Blocks.SNOW_BLOCK);
+
+        getOrCreateTagBuilder(PtwTags.Blocks.SNOWY_DIRT_PATH_VALID)
+                .add(Blocks.GRASS_BLOCK)
+                .add(Blocks.PODZOL)
+                .add(Blocks.MYCELIUM);
     }
 }

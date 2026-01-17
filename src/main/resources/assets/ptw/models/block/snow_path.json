@@ -1,10 +1,10 @@
 {
   "parent": "block/block",
   "textures": {
-    "particle": "block/coarse_dirt",
-    "top": "ptw:block/coarse_dirt_path",
-    "side": "ptw:block/coarse_dirt_path_side",
-    "bottom": "block/coarse_dirt"
+    "particle": "block/snow",
+    "top": "ptw:block/snow_path",
+    "side": "ptw:block/snow_path_side",
+    "bottom": "block/snow"
   },
   "elements": [
     {   "from": [ 0, 0, 0 ],

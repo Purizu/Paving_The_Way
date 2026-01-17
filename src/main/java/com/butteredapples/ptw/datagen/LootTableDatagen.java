@@ -1,6 +1,6 @@
-package com.purizu.ptw.datagen;
+package com.butteredapples.ptw.datagen;
 
-import com.purizu.ptw.contents.blocks.PtwBlocks;
+import com.butteredapples.ptw.contents.blocks.PtwBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.block.Blocks;
@@ -27,5 +27,7 @@ public class LootTableDatagen extends FabricBlockLootTableProvider {
         addDrop(PtwBlocks.SOUL_SOIL_PATH, Blocks.SOUL_SOIL);
         addDrop(PtwBlocks.NETHERRACK_PATH, Blocks.NETHERRACK);
         addDrop(PtwBlocks.ROOTED_DIRT_PATH, Blocks.ROOTED_DIRT);
+        addDropWithSilkTouch(PtwBlocks.SNOW_PATH, Blocks.SNOW_BLOCK);
+        addDrop(PtwBlocks.SNOWY_DIRT_PATH, Blocks.DIRT);
     }
 }

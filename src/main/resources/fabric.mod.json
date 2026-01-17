@@ -5,7 +5,7 @@
 	"name": "Paving The Way",
 	"description": "Adds more path blocks to the game.",
 	"authors": [
-		"Purizu"
+		"ButteredApples"
 	],
 	"contact": {
 
@@ -15,10 +15,10 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.purizu.ptw.PavingTheWay"
+			"com.butteredapples.ptw.PavingTheWay"
 		],
 		"fabric-datagen": [
-          "com.purizu.ptw.datagen.PavingTheWayDataGenerator"
+          "com.butteredapples.ptw.datagen.PavingTheWayDataGenerator"
 		]
 	},
 	"mixins": [

@@ -1,4 +1,4 @@
-package com.purizu.ptw.contents.blocks;
+package com.butteredapples.ptw.contents.blocks;
 
 import net.minecraft.block.*;
 import net.minecraft.entity.Entity;

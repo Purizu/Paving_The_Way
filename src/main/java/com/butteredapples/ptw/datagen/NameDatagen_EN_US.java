@@ -1,6 +1,6 @@
-package com.purizu.ptw.datagen;
+package com.butteredapples.ptw.datagen;
 
-import com.purizu.ptw.contents.blocks.PtwBlocks;
+import com.butteredapples.ptw.contents.blocks.PtwBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.block.Blocks;
@@ -27,5 +27,7 @@ public class NameDatagen_EN_US extends FabricLanguageProvider {
         translationBuilder.add(PtwBlocks.SOUL_SOIL_PATH, "Soul Soil Path");
         translationBuilder.add(PtwBlocks.NETHERRACK_PATH, "Netherrack Path");
         translationBuilder.add(PtwBlocks.ROOTED_DIRT_PATH, "Rooted Dirt Path");
+        translationBuilder.add(PtwBlocks.SNOW_PATH, "Snow Block Path");
+        translationBuilder.add(PtwBlocks.SNOWY_DIRT_PATH, "Snowy Dirt Path");
     }
 }

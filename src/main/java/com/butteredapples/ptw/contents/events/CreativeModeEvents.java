@@ -1,6 +1,6 @@
-package com.purizu.ptw.contents.events;
+package com.butteredapples.ptw.contents.events;
 
-import com.purizu.ptw.contents.blocks.PtwBlocks;
+import com.butteredapples.ptw.contents.blocks.PtwBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.item.ItemStack;
@@ -24,6 +24,8 @@ public class CreativeModeEvents {
                     c.addAfter(new ItemStack(Items.SOUL_SOIL), new ItemStack(PtwBlocks.SOUL_SOIL_PATH));
                     c.addAfter(new ItemStack(Items.NETHERRACK), new ItemStack(PtwBlocks.NETHERRACK_PATH));
                     c.addAfter(new ItemStack(Items.ROOTED_DIRT), new ItemStack(PtwBlocks.ROOTED_DIRT_PATH));
+                    c.addAfter(new ItemStack(Items.SNOW_BLOCK), new ItemStack(PtwBlocks.SNOW_PATH));
+                    c.addAfter(new ItemStack(Items.DIRT_PATH), new ItemStack(PtwBlocks.SNOWY_DIRT_PATH));
         });
     }
 }
