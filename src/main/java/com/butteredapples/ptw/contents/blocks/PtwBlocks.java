@@ -32,13 +32,6 @@ public class PtwBlocks {
     public static final Block SNOW_PATH = registerBlock("snow_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.SNOW_BLOCK), Blocks.SNOW_BLOCK, false));
     public static final Block SNOWY_DIRT_PATH = registerBlock("snowy_dirt_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.DIRT), Blocks.DIRT, false));
 
-    //Rake Blocks
-    public static final Block RAKED_SAND = registerBlock("raked_sand", new RakeBlock(FabricBlockSettings.copy(Blocks.SAND), Blocks.SAND, true));
-    public static final Block RAKED_RED_SAND = registerBlock("raked_red_sand", new RakeBlock(FabricBlockSettings.copy(Blocks.SAND), Blocks.RED_SAND, true));
-    public static final Block RAKED_GRAVEL = registerBlock("raked_gravel", new RakeBlock(FabricBlockSettings.copy(Blocks.GRAVEL), Blocks.GRAVEL, true));
-    public static final Block RAKED_SOUL_SAND = registerBlock("raked_soul_sand", new RakeBlock(FabricBlockSettings.copy(Blocks.SOUL_SAND), Blocks.SOUL_SAND, false));
-
-
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
