@@ -1,9 +1,9 @@
-package net.purizu.ptw.contents.events;
+package com.butteredapples.ptw.contents.events;
 
 import com.google.common.collect.ImmutableMap;
-import net.purizu.ptw.PavingTheWay;
-import net.purizu.ptw.contents.blocks.PtwBlocks;
-import net.purizu.ptw.contents.utils.PtwTags;
+import com.butteredapples.ptw.PavingTheWay;
+import com.butteredapples.ptw.contents.blocks.PtwBlocks;
+import com.butteredapples.ptw.contents.utils.PtwTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvent;
@@ -39,6 +39,9 @@ public class ShovelingEvents {
         FLATTENING_SOUNDS.put(Blocks.SOUL_SAND, SoundEvents.SOUL_SAND_FALL);
         FLATTENING_SOUNDS.put(Blocks.SOUL_SOIL, SoundEvents.SOUL_SOIL_FALL);
         FLATTENING_SOUNDS.put(Blocks.NETHERRACK, SoundEvents.NETHERRACK_FALL);
+        FLATTENING_SOUNDS.put(Blocks.ROOTED_DIRT, SoundEvents.ROOTED_DIRT_FALL);
+        FLATTENING_SOUNDS.put(Blocks.SNOW_BLOCK, SoundEvents.SNOW_FALL);
+        FLATTENING_SOUNDS.put(Blocks.PACKED_MUD, SoundEvents.PACKED_MUD_FALL);
     }
 
     @SubscribeEvent
@@ -49,6 +52,21 @@ public class ShovelingEvents {
         Player player = event.getEntity();
         ItemStack stack = event.getItemStack();
 
+        //Snowy dirt paths
+        if (stack.is(ItemTags.SHOVELS) && !player.isSpectator() && event.getFace() != Direction.DOWN && (level.isEmptyBlock(pos.above())
+                || level.getBlockState(pos.above()).canBeReplaced()) && state.is(Blocks.SNOW) && level.getBlockState(pos.below()).is(PtwTags.Blocks.SNOW_DIRT_PATH_VALID)) {
+            level.playSound(player, pos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1, 1);
+            level.playSound(player, pos, SoundEvents.SNOW_FALL, SoundSource.BLOCKS, 1, 1);
+            if (!level.isClientSide) {
+                stack.hurtAndBreak(1, player, player1 -> player1.broadcastBreakEvent(event.getHand()));
+                level.setBlockAndUpdate(pos, Blocks.AIR.defaultBlockState());
+                level.setBlockAndUpdate(pos.below(), PtwBlocks.SNOWY_DIRT_PATH.get().defaultBlockState());
+            }
+            event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
+            event.setCanceled(true);
+        }
+
+        //Everything else
         if (stack.is(ItemTags.SHOVELS) && !player.isSpectator() && event.getFace() != Direction.DOWN && (level.isEmptyBlock(pos.above()) || level.getBlockState(pos.above()).canBeReplaced()) && state.is(PtwTags.Blocks.PATHABLE_BLOCKS)) {
             SoundEvent sound = FLATTENING_SOUNDS.getOrDefault(state.getBlock(), SoundEvents.SHOVEL_FLATTEN);
             level.playSound(player, pos, sound, SoundSource.BLOCKS, 1, 1);
@@ -67,7 +85,10 @@ public class ShovelingEvents {
                         Map.entry(Blocks.CRIMSON_NYLIUM, PtwBlocks.CRIMSON_NYLIUM_PATH),
                         Map.entry(Blocks.WARPED_NYLIUM, PtwBlocks.WARPED_NYLIUM_PATH),
                         Map.entry(Blocks.SOUL_SAND, PtwBlocks.SOUL_SAND_PATH),
-                        Map.entry(Blocks.SOUL_SOIL, PtwBlocks.SOUL_SOIL_PATH))
+                        Map.entry(Blocks.SOUL_SOIL, PtwBlocks.SOUL_SOIL_PATH),
+                        Map.entry(Blocks.ROOTED_DIRT, PtwBlocks.ROOTED_DIRT_PATH),
+                        Map.entry(Blocks.SNOW_BLOCK, PtwBlocks.SNOW_PATH),
+                        Map.entry(Blocks.PACKED_MUD, PtwBlocks.PACKED_MUD_PATH))
                         .get(state.getBlock()).get().defaultBlockState(); level.setBlockAndUpdate(pos, pathState);
             }
             event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));

@@ -1,6 +1,7 @@
 {
+  "replace": false,
   "values": [
-    "grounded:soul_sand_path",
-    "grounded:soul_soil_path"
+    "ptw:soul_sand_path",
+    "ptw:soul_soil_path"
   ]
 }

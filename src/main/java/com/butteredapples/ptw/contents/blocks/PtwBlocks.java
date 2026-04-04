@@ -1,6 +1,6 @@
-package net.purizu.ptw.contents.blocks;
+package com.butteredapples.ptw.contents.blocks;
 
-import net.purizu.ptw.PavingTheWay;
+import com.butteredapples.ptw.PavingTheWay;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -33,6 +33,11 @@ public class PtwBlocks {
     public static final RegistryObject<Block> SOUL_SAND_PATH = registerBlock("soul_sand_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_SAND), Blocks.SOUL_SAND, false));
     public static final RegistryObject<Block> SOUL_SOIL_PATH = registerBlock("soul_soil_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_SOIL), Blocks.SOUL_SOIL, false));
     public static final RegistryObject<Block> NETHERRACK_PATH = registerBlock("netherrack_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.NETHERRACK), Blocks.NETHERRACK, false));
+    public static final RegistryObject<Block> ROOTED_DIRT_PATH = registerBlock("rooted_dirt_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.ROOTED_DIRT), Blocks.ROOTED_DIRT, false));
+    public static final RegistryObject<Block> SNOW_PATH = registerBlock("snow_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.SNOW), Blocks.SNOW, false));
+    public static final RegistryObject<Block> SNOWY_DIRT_PATH = registerBlock("snowy_dirt_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.DIRT), Blocks.DIRT, false));
+    public static final RegistryObject<Block> PACKED_MUD_PATH = registerBlock("packed_mud_path", ()-> new BetterDirtPathBlock(BlockBehaviour.Properties.copy(Blocks.PACKED_MUD), Blocks.PACKED_MUD, false));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

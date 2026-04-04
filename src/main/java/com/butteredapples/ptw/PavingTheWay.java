@@ -1,6 +1,6 @@
-package net.purizu.ptw;
+package com.butteredapples.ptw;
 
-import net.purizu.ptw.contents.blocks.PtwBlocks;
+import com.butteredapples.ptw.contents.blocks.PtwBlocks;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
@@ -46,6 +46,10 @@ public class PavingTheWay
             entries.putAfter(new ItemStack(Blocks.SOUL_SAND), new ItemStack(PtwBlocks.SOUL_SAND_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             entries.putAfter(new ItemStack(Blocks.SOUL_SOIL), new ItemStack(PtwBlocks.SOUL_SOIL_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             entries.putAfter(new ItemStack(Blocks.NETHERRACK), new ItemStack(PtwBlocks.NETHERRACK_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            entries.putAfter(new ItemStack(Blocks.ROOTED_DIRT), new ItemStack(PtwBlocks.ROOTED_DIRT_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            entries.putAfter(new ItemStack(Blocks.SNOW_BLOCK), new ItemStack(PtwBlocks.SNOW_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            entries.putAfter(new ItemStack(Blocks.DIRT_PATH), new ItemStack(PtwBlocks.SNOWY_DIRT_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            entries.putAfter(new ItemStack(Blocks.PACKED_MUD), new ItemStack(PtwBlocks.PACKED_MUD_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
 

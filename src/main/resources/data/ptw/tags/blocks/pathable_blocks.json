@@ -1,6 +1,6 @@
 {
+  "replace": false,
   "values": [
-    "minecraft:grass_block",
     "minecraft:dirt",
     "minecraft:coarse_dirt",
     "minecraft:mycelium",
@@ -13,6 +13,8 @@
     "minecraft:warped_nylium",
     "minecraft:soul_sand",
     "minecraft:soul_soil",
-    "minecraft:netherrack"
+    "minecraft:rooted_dirt",
+    "minecraft:snow_block",
+    "minecraft:packed_mud"
   ]
 }

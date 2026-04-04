@@ -1,4 +1,4 @@
-package net.purizu.ptw.contents.blocks;
+package com.butteredapples.ptw.contents.blocks;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;

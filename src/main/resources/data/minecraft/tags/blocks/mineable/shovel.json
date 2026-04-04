@@ -1,4 +1,5 @@
 {
+  "replace": false,
   "values": [
     "ptw:shaved_dirt_path",
     "ptw:coarse_dirt_path",
@@ -9,6 +10,10 @@
     "ptw:red_sand_path",
     "ptw:gravel_path",
     "ptw:soul_sand_path",
-    "ptw:soul_soil_path"
+    "ptw:soul_soil_path",
+    "ptw:rooted_dirt_path",
+    "ptw:snow_path",
+    "ptw:snowy_dirt_path",
+    "ptw:packed_mud_path"
   ]
 }
