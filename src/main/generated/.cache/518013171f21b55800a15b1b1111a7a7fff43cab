@@ -1,0 +1,7 @@
+// 1.20.1	2026-01-17T11:04:20.198508	Paving The Way/Tags for minecraft:block
+dbd095cbed1d5c282ca6c4aecff4ff57922c5875 data\ptw\tags\blocks\pathable_blocks_pickaxe.json
+79227e90191d15331ef0d4f53c1554cea60b47d5 data\minecraft\tags\blocks\mineable\pickaxe.json
+2a8d212dd7e181e413562a995a25add52a301fdc data\minecraft\tags\blocks\soul_speed_blocks.json
+109e16780bb9572104c24fd314843c85f5b557f3 data\ptw\tags\blocks\snow_dirt_path_valid.json
+dc5d13db7e7da0595305dbb19284d4d51abac2ed data\ptw\tags\blocks\pathable_blocks.json
+1edc6dfc88508c88fd5553d4bb370d6a1ee7464b data\minecraft\tags\blocks\mineable\shovel.json

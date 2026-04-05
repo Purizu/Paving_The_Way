@@ -1,0 +1,17 @@
+// 1.20.1	2026-01-17T11:04:20.1915064	Paving The Way/Block Loot Tables
+6a52bd8a2c265674d71cdeac894a7e00e5d0dae1 data\ptw\loot_tables\blocks\snow_path.json
+32db511bc1095c1201ecbfa2e61b911593d8edb0 data\ptw\loot_tables\blocks\coarse_dirt_path.json
+020731efb45b04a16c86b1b43b3f701f3195b96d data\ptw\loot_tables\blocks\warped_nylium_path.json
+b6dc615d23bf39f4c043f8e1cdb635c0be9cb708 data\ptw\loot_tables\blocks\mycelium_path.json
+2c1d6d11b9079867d1f5fe73c0a57b6b095bedaa data\ptw\loot_tables\blocks\soul_sand_path.json
+020731efb45b04a16c86b1b43b3f701f3195b96d data\ptw\loot_tables\blocks\netherrack_path.json
+020731efb45b04a16c86b1b43b3f701f3195b96d data\ptw\loot_tables\blocks\crimson_nylium_path.json
+6aa43351b49d7b38e7a3bce6e6ab61fceea40821 data\ptw\loot_tables\blocks\mud_path.json
+b6dc615d23bf39f4c043f8e1cdb635c0be9cb708 data\ptw\loot_tables\blocks\podzol_path.json
+b6dc615d23bf39f4c043f8e1cdb635c0be9cb708 data\ptw\loot_tables\blocks\snowy_dirt_path.json
+7e530e35f8041fb294c05279921530c06bb14b4f data\ptw\loot_tables\blocks\sand_path.json
+b6dc615d23bf39f4c043f8e1cdb635c0be9cb708 data\ptw\loot_tables\blocks\shaved_dirt_path.json
+65720d7b7654661b81b39100f98e93b0c5cfd5e9 data\ptw\loot_tables\blocks\red_sand_path.json
+b6f2e11bf0013c5992ee76be02c747094de3535f data\ptw\loot_tables\blocks\gravel_path.json
+f0f7e7fae8e87e9df2cd6a6ff5f9b4f8997bf9b4 data\ptw\loot_tables\blocks\rooted_dirt_path.json
+2309ec2303c718943c3377f42ff8afe47b02075b data\ptw\loot_tables\blocks\soul_soil_path.json
