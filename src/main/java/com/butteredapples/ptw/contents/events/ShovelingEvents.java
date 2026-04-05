@@ -41,7 +41,7 @@ public class ShovelingEvents {
         FLATTENING_SOUNDS.put(Blocks.NETHERRACK, SoundEvents.NETHERRACK_FALL);
         FLATTENING_SOUNDS.put(Blocks.ROOTED_DIRT, SoundEvents.ROOTED_DIRT_FALL);
         FLATTENING_SOUNDS.put(Blocks.SNOW_BLOCK, SoundEvents.SNOW_FALL);
-        FLATTENING_SOUNDS.put(Blocks.PACKED_MUD, SoundEvents.PACKED_MUD_FALL);
+        FLATTENING_SOUNDS.put(Blocks.PACKED_MUD, SoundEvents.PACKED_MUD_PLACE);
     }
 
     @SubscribeEvent
