@@ -31,6 +31,7 @@ public class PtwBlocks {
     public static final Block ROOTED_DIRT_PATH = registerBlock("rooted_dirt_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.ROOTED_DIRT), Blocks.ROOTED_DIRT, false));
     public static final Block SNOW_PATH = registerBlock("snow_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.SNOW_BLOCK), Blocks.SNOW_BLOCK, false));
     public static final Block SNOWY_DIRT_PATH = registerBlock("snowy_dirt_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.DIRT), Blocks.DIRT, false));
+    public static final Block PACKED_MUD_PATH = registerBlock("packed_mud_path", new BetterDirtPathBlock(FabricBlockSettings.copy(Blocks.PACKED_MUD), Blocks.PACKED_MUD, false));
 
 
     private static Block registerBlock(String name, Block block) {

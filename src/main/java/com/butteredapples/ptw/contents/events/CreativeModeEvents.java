@@ -27,5 +27,6 @@ public class CreativeModeEvents {
                     c.addAfter(new ItemStack(Items.SNOW_BLOCK), new ItemStack(PtwBlocks.SNOW_PATH));
                     c.addAfter(new ItemStack(Items.DIRT_PATH), new ItemStack(PtwBlocks.SNOWY_DIRT_PATH));
         });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(c -> c.addAfter(new ItemStack(Items.PACKED_MUD), new ItemStack(PtwBlocks.PACKED_MUD_PATH)));
     }
 }

@@ -36,7 +36,8 @@ public class BlockTagDatagen extends FabricTagProvider.BlockTagProvider{
                 .add(SOUL_SOIL_PATH)
                 .add(ROOTED_DIRT_PATH)
                 .add(SNOW_PATH)
-                .add(SNOWY_DIRT_PATH);
+                .add(SNOWY_DIRT_PATH)
+                .add(PACKED_MUD_PATH);
 
         getOrCreateTagBuilder(BlockTags.SOUL_SPEED_BLOCKS)
                 .add(SOUL_SAND_PATH)
@@ -58,7 +59,8 @@ public class BlockTagDatagen extends FabricTagProvider.BlockTagProvider{
                 .add(Blocks.SOUL_SAND)
                 .add(Blocks.SOUL_SOIL)
                 .add(Blocks.ROOTED_DIRT)
-                .add(Blocks.SNOW_BLOCK);
+                .add(Blocks.SNOW_BLOCK)
+                .add(Blocks.PACKED_MUD);
 
         getOrCreateTagBuilder(PtwTags.Blocks.SNOWY_DIRT_PATH_VALID)
                 .add(Blocks.GRASS_BLOCK)

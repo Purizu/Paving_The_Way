@@ -13,6 +13,7 @@
     "ptw:soul_soil_path",
     "ptw:rooted_dirt_path",
     "ptw:snow_path",
-    "ptw:snowy_dirt_path"
+    "ptw:snowy_dirt_path",
+    "ptw:packed_mud_path"
   ]
 }

@@ -29,5 +29,6 @@ public class LootTableDatagen extends FabricBlockLootTableProvider {
         addDrop(PtwBlocks.ROOTED_DIRT_PATH, Blocks.ROOTED_DIRT);
         addDropWithSilkTouch(PtwBlocks.SNOW_PATH, Blocks.SNOW_BLOCK);
         addDrop(PtwBlocks.SNOWY_DIRT_PATH, Blocks.DIRT);
+        addDrop(PtwBlocks.PACKED_MUD_PATH, Blocks.PACKED_MUD);
     }
 }
