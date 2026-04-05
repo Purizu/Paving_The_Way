@@ -30,9 +30,9 @@ public class PavingTheWay
     }
 
     public void addCreative(BuildCreativeModeTabContentsEvent event) {
+        MutableHashedLinkedMap<ItemStack, CreativeModeTab.TabVisibility> entries = event.getEntries();
         if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
             //Code by kapitencraft on the Kaupenhub discord server
-            MutableHashedLinkedMap<ItemStack, CreativeModeTab.TabVisibility> entries = event.getEntries();
             entries.putAfter(new ItemStack(Blocks.DIRT), new ItemStack(PtwBlocks.SHAVED_DIRT_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             entries.putAfter(new ItemStack(Blocks.COARSE_DIRT), new ItemStack(PtwBlocks.COARSE_DIRT_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             entries.putAfter(new ItemStack(Blocks.MYCELIUM), new ItemStack(PtwBlocks.MYCELIUM_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
@@ -49,6 +49,8 @@ public class PavingTheWay
             entries.putAfter(new ItemStack(Blocks.ROOTED_DIRT), new ItemStack(PtwBlocks.ROOTED_DIRT_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             entries.putAfter(new ItemStack(Blocks.SNOW_BLOCK), new ItemStack(PtwBlocks.SNOW_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
             entries.putAfter(new ItemStack(Blocks.DIRT_PATH), new ItemStack(PtwBlocks.SNOWY_DIRT_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS){
             entries.putAfter(new ItemStack(Blocks.PACKED_MUD), new ItemStack(PtwBlocks.PACKED_MUD_PATH.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
         }
     }
