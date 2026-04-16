@@ -79,6 +79,7 @@ public class Events {
         builder.put(Blocks.MYCELIUM, PtwBlocks.MYCELIUM_PATH.get());
         builder.put(Blocks.PODZOL, PtwBlocks.PODZOL_PATH.get());
         builder.put(Blocks.MUD, PtwBlocks.MUD_PATH.get());
+        builder.put(Blocks.PACKED_MUD, PtwBlocks.PACKED_MUD_PATH.get());
         builder.put(Blocks.SAND, PtwBlocks.SAND_PATH.get());
         builder.put(Blocks.RED_SAND, PtwBlocks.RED_SAND_PATH.get());
         builder.put(Blocks.GRAVEL, PtwBlocks.GRAVEL_PATH.get());
@@ -125,7 +126,7 @@ public class Events {
             level.playSound(player, pos, sound, SoundSource.BLOCKS, 1, 1);
             if (!level.isClientSide) {
                 stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(event.getHand()));
-                level.setBlockAndUpdate(pos, EXTRA_SHOVELING.get().get(state.getBlock()).withPropertiesOf(state));
+                level.setBlockAndUpdate(pos, EXTRA_SHOVELING.get().get(state.getBlock()).defaultBlockState());
             }
             event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
             event.setCanceled(true);
@@ -135,7 +136,7 @@ public class Events {
             level.playSound(player, pos, sound, SoundSource.BLOCKS, 1, 1);
             if (!level.isClientSide) {
                 stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(event.getHand()));
-                level.setBlockAndUpdate(pos, EXTRA_SHOVELING_PICKAXE.get().get(state.getBlock()).withPropertiesOf(state));
+                level.setBlockAndUpdate(pos, EXTRA_SHOVELING_PICKAXE.get().get(state.getBlock()).defaultBlockState());
             }
             event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
             event.setCanceled(true);
