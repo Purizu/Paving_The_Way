@@ -1,6 +1,8 @@
 package com.butteredapples.ptw.contents.events;
 
 import com.butteredapples.ptw.contents.utils.PtwTags;
+import com.google.common.base.Supplier;
+import com.google.common.base.Suppliers;
 import com.google.common.collect.ImmutableMap;
 import com.butteredapples.ptw.PavingTheWay;
 import com.butteredapples.ptw.contents.blocks.PtwBlocks;
@@ -22,7 +24,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
 import java.util.HashMap;
-import java.util.Map;
 
 import static net.minecraft.world.level.block.Blocks.*;
 
@@ -30,6 +31,29 @@ import static net.minecraft.world.level.block.Blocks.*;
 public class ShovelingEvents {
 
     public static final HashMap<Block, SoundEvent> FLATTENING_SOUNDS = new HashMap<>();
+    public static final Supplier<ImmutableMap<Block, Block>> EXTRA_SHOVELING = Suppliers.memoize(() ->{
+        ImmutableMap.Builder<Block, Block> builder = ImmutableMap.builder();
+        builder.put(DIRT, PtwBlocks.SHAVED_DIRT_PATH.get());
+        builder.put(COARSE_DIRT, PtwBlocks.COARSE_DIRT_PATH.get());
+        builder.put(MYCELIUM, PtwBlocks.MYCELIUM_PATH.get());
+        builder.put(PODZOL, PtwBlocks.PODZOL_PATH.get());
+        builder.put(MUD, PtwBlocks.MUD_PATH.get());
+        builder.put(SAND, PtwBlocks.SAND_PATH.get());
+        builder.put(RED_SAND, PtwBlocks.RED_SAND_PATH.get());
+        builder.put(GRAVEL, PtwBlocks.GRAVEL_PATH.get());
+        builder.put(CRIMSON_NYLIUM, PtwBlocks.CRIMSON_NYLIUM_PATH.get());
+        builder.put(WARPED_NYLIUM, PtwBlocks.WARPED_NYLIUM_PATH.get());
+        builder.put(SOUL_SAND, PtwBlocks.SOUL_SAND_PATH.get());
+        builder.put(SOUL_SOIL, PtwBlocks.SOUL_SOIL_PATH.get());
+        builder.put(ROOTED_DIRT, PtwBlocks.ROOTED_DIRT_PATH.get());
+        builder.put(SNOW_BLOCK, PtwBlocks.SNOW_PATH.get());
+        return builder.build();
+    });
+    public static final Supplier<ImmutableMap<Block, Block>> EXTRA_SHOVELING_PICKAXE = Suppliers.memoize(() ->{
+        ImmutableMap.Builder<Block, Block> builder = ImmutableMap.builder();
+        builder.put(NETHERRACK, PtwBlocks.NETHERRACK_PATH.get());
+        return builder.build();
+    });
 
     static {
         FLATTENING_SOUNDS.put(SAND, SoundEvents.SAND_FALL);
@@ -74,25 +98,7 @@ public class ShovelingEvents {
             level.playSound(player, pos, sound, SoundSource.BLOCKS, 1, 1);
             if (!level.isClientSide) {
                 stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(event.getHand()));
-                BlockState pathState = ImmutableMap.ofEntries(
-                        Map.entry(GRASS_BLOCK, DIRT_PATH.defaultBlockState().getBlockHolder()),
-                        Map.entry(DIRT, PtwBlocks.SHAVED_DIRT_PATH),
-                        Map.entry(COARSE_DIRT, PtwBlocks.COARSE_DIRT_PATH),
-                        Map.entry(MYCELIUM, PtwBlocks.MYCELIUM_PATH),
-                        Map.entry(PODZOL, PtwBlocks.PODZOL_PATH),
-                        Map.entry(MUD, PtwBlocks.MUD_PATH),
-                        Map.entry(SAND, PtwBlocks.SAND_PATH),
-                        Map.entry(RED_SAND, PtwBlocks.RED_SAND_PATH),
-                        Map.entry(GRAVEL, PtwBlocks.GRAVEL_PATH),
-                        Map.entry(CRIMSON_NYLIUM, PtwBlocks.CRIMSON_NYLIUM_PATH),
-                        Map.entry(WARPED_NYLIUM, PtwBlocks.WARPED_NYLIUM_PATH),
-                        Map.entry(SOUL_SAND, PtwBlocks.SOUL_SAND_PATH),
-                        Map.entry(SOUL_SOIL, PtwBlocks.SOUL_SOIL_PATH),
-                        Map.entry(ROOTED_DIRT, PtwBlocks.ROOTED_DIRT_PATH),
-                        Map.entry(SNOW_BLOCK, PtwBlocks.SNOW_PATH),
-                        Map.entry(PACKED_MUD, PtwBlocks.PACKED_MUD_PATH))
-                        .get(state.getBlock()).get().defaultBlockState();
-                level.setBlockAndUpdate(pos, pathState);
+                level.setBlockAndUpdate(pos, EXTRA_SHOVELING.get().get(state.getBlock()).withPropertiesOf(state));
             }
             event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
             event.setCanceled(true);
@@ -102,7 +108,7 @@ public class ShovelingEvents {
             level.playSound(player, pos, sound, SoundSource.BLOCKS, 1, 1);
             if (!level.isClientSide) {
                 stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(event.getHand()));
-                BlockState pathState = ImmutableMap.ofEntries(Map.entry(NETHERRACK, PtwBlocks.NETHERRACK_PATH)).get(state.getBlock()).get().defaultBlockState(); level.setBlockAndUpdate(pos, pathState);
+                level.setBlockAndUpdate(pos, EXTRA_SHOVELING_PICKAXE.get().get(state.getBlock()).withPropertiesOf(state));
             }
             event.setCancellationResult(InteractionResult.sidedSuccess(level.isClientSide()));
             event.setCanceled(true);
