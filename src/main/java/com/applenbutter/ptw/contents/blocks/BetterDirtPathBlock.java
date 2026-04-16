@@ -10,13 +10,14 @@ import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.DirtPathBlock;
 import net.minecraft.world.level.block.FallingBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 
 import javax.annotation.Nullable;
 
-public class BetterDirtPathBlock extends Block {
+public class BetterDirtPathBlock extends DirtPathBlock {
     public final Block replacementBlock;
     public boolean isGravityBlock;
 
@@ -25,8 +26,6 @@ public class BetterDirtPathBlock extends Block {
         this.replacementBlock = replacementBlock;
         this.isGravityBlock = isGravityBlock;
     }
-
-
 
     private boolean IfFalling(LevelAccessor worldIn, BlockPos currentPos) {
         if (!isGravityBlock)
