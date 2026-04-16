@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "ptw:block/soul_soil_path"
+      },
+      {
+        "model": "ptw:block/soul_soil_path",
+        "y": 90
+      },
+      {
+        "model": "ptw:block/soul_soil_path",
+        "y": 180
+      },
+      {
+        "model": "ptw:block/soul_soil_path",
+        "y": 270
+      }
+    ]
+  }
+}

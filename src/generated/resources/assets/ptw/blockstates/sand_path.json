@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "ptw:block/sand_path"
+      },
+      {
+        "model": "ptw:block/sand_path",
+        "y": 90
+      },
+      {
+        "model": "ptw:block/sand_path",
+        "y": 180
+      },
+      {
+        "model": "ptw:block/sand_path",
+        "y": 270
+      }
+    ]
+  }
+}

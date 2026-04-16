@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "ptw:block/crimson_nylium_path"
+      },
+      {
+        "model": "ptw:block/crimson_nylium_path",
+        "y": 90
+      },
+      {
+        "model": "ptw:block/crimson_nylium_path",
+        "y": 180
+      },
+      {
+        "model": "ptw:block/crimson_nylium_path",
+        "y": 270
+      }
+    ]
+  }
+}
